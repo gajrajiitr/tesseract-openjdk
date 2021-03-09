@@ -2,14 +2,13 @@ FROM ubuntu:20.04
 
 LABEL maintainer="gajrajiitr@gmail.com"
 
-RUN apt update -y
-
 RUN echo 'Install languages'
-RUN apt-get install -y tesseract-ocr
-RUN apt-get install -y tesseract-ocr-hin
-RUN apt-get install -y tesseract-ocr-mar
-RUN apt-get install -y tesseract-ocr-san
-
+RUN apt update -y && apt-get install -y \
+    tesseract-ocr
+    tesseract-ocr-hin
+    tesseract-ocr-mar
+    tesseract-ocr-san
+    
 # Use by Tess4j API
 ENV TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata/
 
