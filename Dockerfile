@@ -4,9 +4,9 @@ LABEL maintainer="gajrajiitr@gmail.com"
 
 RUN echo 'Install languages'
 RUN apt update -y && apt-get install -y \
-    tesseract-ocr
-    tesseract-ocr-hin
-    tesseract-ocr-mar
+    tesseract-ocr \
+    tesseract-ocr-hin \
+    tesseract-ocr-mar \
     tesseract-ocr-san
     
 # Use by Tess4j API
